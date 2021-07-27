@@ -75,7 +75,7 @@ def remove_stopwords(string, extra_words = [], exclude_words = []):
     string_without_stopwords = ' '.join(filtered_words)
     return string_without_stopwords
     
-def prep_article_data(df, column, extra_words=[], exclude_words=[]):
+def prep_text_data(df, column, extra_words=[], exclude_words=[]):
     '''
     This function take in a df and the string name for a text column with 
     option to pass lists for extra_words and exclude_words and
@@ -103,8 +103,4 @@ def prep_article_data(df, column, extra_words=[], exclude_words=[]):
                                    extra_words=extra_words, 
                                    exclude_words=exclude_words)
     
-    return df[['title', column,'clean', 'stemmed', 'lemmatized']]
-    
-    
-s
-    
+    return df[['title', column,'clean', 'stemmed', 'lemmatized']]    
